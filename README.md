@@ -11,7 +11,7 @@ This project writed for power up my skills.
 
 ## Download
 
-$ git clone https://github.com/Enderiatus/Pomodoro.git
+$ git clone https://github.com/Enderiatus/Pomodoro-Timer.git
 
 ## License
 MIT
