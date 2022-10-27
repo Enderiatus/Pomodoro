@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #EDE4E0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 320px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    background: linear-gradient(rgb(237, 228, 224), rgb(159, 135, 114), rgb(102, 90, 72));
+    border-radius: 10px;
+    position: relative;
+}
+
+
+/* status bar */
+
+.status-bar {
+    display: flex;
+    width: 320px;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: antiquewhite;
+}
+
+#working, #rest {
+    width: 45%;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(159, 135, 114, 0.5);
+    border-radius: 10px;
+}
+
+#working.active, #rest.active {
+    background-color: rgb(159, 135, 114, 1);
+    box-shadow: 1px 2px 10px 1px #c4914b;
+}
+
+
+/* circle box */
+
+
+.container .circle-box {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .circle-box svg {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background-color: transparent;
+    transform: rotate(270deg);
+}
+
+.container .circle-box svg circle {
+    height: 100%;
+    width: 100%;
+    fill: transparent;
+    stroke-width: 2px;
+    stroke: rgb(89, 69, 69);
+}
+
+.container .circle-box #progress {
+    stroke: #FFF8EA;
+    stroke-dasharray: 930px;
+    stroke-dashoffset: 930px;
+}
+
+.circle-dot {
+    position: absolute;
+    inset: 0px;
+    z-index: 10;
+}
+
+.circle-dot::before {
+    content: '';
+    position: absolute;
+    background: #815B5B;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    transform: translateX(-50%);
+    top: -5px;
+    left: 50%;
+    box-shadow: 0px 0px 15px 7px #EDE4E0 ;
+    
+}
+
+
+/* timer text and timer buttons */ 
+
+
+.timer {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    font-size: 32px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+    color: #EDE4E0;
+    box-sizing: border-box;
+}
+
+.timer .timer-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    
+}
+
+.timer-button-container .timer-button {
+    display: none;
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    stroke: #EDE4E0;
+    margin-top: 50px;
+}
+
+.timer-button-container .timer-button svg{
+    height: 64px;
+    width: 64px;
+    transform: rotate(360deg);
+    stroke: #EDE4E0;
+    cursor: pointer;
+    visibility: hidden;
+    display: none;
+}
+
+.timer-button-container .timer-button.active-btn, .timer-button-container .timer-button.active-btn svg{
+    visibility: visible;
+    display: block;
+    backdrop-filter: blur(100px);
+    background-color: rgb(159, 135, 114, 0.5);
+    border-radius: 10px;
+}
+
+
+
+/* settings menu */
+
+
+
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(250, 247, 240, 0.9);
+    visibility: visible;
+    z-index: 100;
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.settings.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+
+.settings-time {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.settings-time-work, .settings-time-break {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#settings-icon {
+    width: 32px;
+    height: 32px;
+    margin-top: 32px;
+    cursor: pointer;
+}
+#break-time, #work-time {
+    appearance: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50%;
+    height: 20px;
+    color: white;
+    text-align: center;
+}
+
+
+#apply-settings {
+    appearance: none;
+    color: gray;
+    font-size: 24px;
+    width: 50%;
+    height: 20%;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgba(102, 90, 72, 0.5);
+    cursor: pointer;
+
+}
+.close-settings {
+    appearance: none;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 1%;
+    background-color: transparent;
+    border: none;
+}

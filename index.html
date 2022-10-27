@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pomodoro</title>
+</head>
+<body>
+    <h2>Pomodoro</h2>
+    <div class="status-bar">
+        <div id="working">Çalışma</div>
+        <div id="rest">Kısa Mola</div>
+    </div>
+    <div class="container">
+        <div class="settings hidden">
+            <h1>Ayarlar</h1>
+            <button onclick="toggleSettings()" class="close-settings"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="black" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+             </svg></button>
+             <h2>Süre Ayarları</h2>
+             <div class="settings-time">
+                <div class="settings-time-work">
+                    <label for="work-time">Çalışma Süresi</label>
+                    <input type="number" name="Çalışma Süresi" id="work-time">
+                </div>
+                <div class="settings-time-break">
+                    <label for="break-time">Mola Süresi</label>
+                    <input type="number" name="Mola Süresi" id="break-time">
+                </div>
+             </div>
+             <button id="apply-settings" onclick="applySettings()">Onayla</button>
+        </div>
+        <div class="circle-box">
+            <div class="circle-dot"></div>
+            <svg>
+                <circle cx="150" cy="150" r="148"></circle>
+                <circle id="progress" cx="150" cy="150" r="148"></circle>
+            </svg>
+            <div class="timer">
+                <p id="timer-span">00:00</p>
+                <div class="timer-button-container">
+                    <div id="start-button" class="timer-button active-btn" onclick="_timer('start')"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M7 4v16l13 -8z"></path>
+                     </svg></div>
+                     <div id="stop-button" class="timer-button" onclick="_timer('stop')"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-pause" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <rect x="6" y="5" width="4" height="14" rx="1"></rect>
+                        <rect x="14" y="5" width="4" height="14" rx="1"></rect>
+                     </svg></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+     <svg id="settings-icon" onclick="toggleSettings()" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"></path>
+        <circle cx="12" cy="12" r="3"></circle>
+     </svg>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
