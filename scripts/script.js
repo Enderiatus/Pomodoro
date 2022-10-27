@@ -19,7 +19,7 @@ function _timer(callback) {
     if(callback == "start") {
         changeStatus();
         running = true;
-        timerInterval = setInterval(timerProgress, 10);
+        timerInterval = setInterval(timerProgress, 1000);
     }else if(callback == "stop") {
         toggleButton();
         running = false;
