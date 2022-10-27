@@ -15,7 +15,6 @@ let sound = new Audio("sounds/alarm-sound.wav")
 
 function _timer(callback) {
     if(!sound.paused) sound.pause();
-    console.log(running)
     if(callback == "start") {
         changeStatus();
         running = true;
