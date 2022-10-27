@@ -25,11 +25,11 @@
              <div class="settings-time">
                 <div class="settings-time-work">
                     <label for="work-time">Çalışma Süresi</label>
-                    <input type="number" name="Çalışma Süresi" id="work-time">
+                    <input type="number" name="Çalışma Süresi" id="work-time" value="25">
                 </div>
                 <div class="settings-time-break">
                     <label for="break-time">Mola Süresi</label>
-                    <input type="number" name="Mola Süresi" id="break-time">
+                    <input type="number" name="Mola Süresi" id="break-time" value="5">
                 </div>
              </div>
              <button id="apply-settings" onclick="applySettings()">Onayla</button>
@@ -41,7 +41,7 @@
                 <circle id="progress" cx="150" cy="150" r="148"></circle>
             </svg>
             <div class="timer">
-                <p id="timer-span">00:00</p>
+                <p id="timer-span">25:00</p>
                 <div class="timer-button-container">
                     <div id="start-button" class="timer-button active-btn" onclick="_timer('start')"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
