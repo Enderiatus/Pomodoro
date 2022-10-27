@@ -67,7 +67,7 @@ function timerProgress() {
         circleReset();
         changeStatus();
         running=false;
-        //sound.play()
+        sound.play()
     }
 }
 
