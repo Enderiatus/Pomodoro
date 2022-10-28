@@ -4,7 +4,7 @@
 Pomodoro timer is a timer that you can use when you are studying or working.
 This project is using HTML, CSS and vanilla JS. I writed for power up my skills.
 
-## Features
+## Planned Features
 - Long break selection
 - Background customizations
 - Counter
